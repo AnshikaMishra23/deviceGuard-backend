@@ -1,0 +1,2 @@
+const express=require("express");const auth=require("../middleware/authMiddleware");const c=require("../controllers/deviceController");const router=express.Router();router.use(auth);
+router.get("/",c.listDevices);router.get("/paired",c.listPaired);router.post("/",c.createDevice);router.post("/heartbeat",c.heartbeat);router.get("/:id",c.getDevice);router.delete("/:id",c.deleteDevice);module.exports=router;

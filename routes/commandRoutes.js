@@ -1,0 +1,1 @@
+const express=require("express");const auth=require("../middleware/authMiddleware");const c=require("../controllers/commandController");const router=express.Router();router.use(auth);router.post("/ring",c.ring);module.exports=router;

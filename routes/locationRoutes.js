@@ -1,0 +1,1 @@
+const express=require("express");const auth=require("../middleware/authMiddleware");const c=require("../controllers/locationController");const router=express.Router();router.use(auth);router.post("/update",c.updateLocation);router.get("/:deviceId",c.latest);router.get("/:deviceId/history",c.history);module.exports=router;

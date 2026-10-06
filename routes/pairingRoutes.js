@@ -1,0 +1,1 @@
+const express=require("express");const auth=require("../middleware/authMiddleware");const c=require("../controllers/deviceController");const pc=require("../controllers/pairingController");const router=express.Router();router.use(auth);router.post("/create",c.makePairingCode);router.post("/join",c.joinPairing);router.delete("/:id",pc.unpair);module.exports=router;
